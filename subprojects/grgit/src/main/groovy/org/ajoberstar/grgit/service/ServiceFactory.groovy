@@ -28,8 +28,8 @@ class ServiceFactory {
 		throw new AssertionError("Cannot instantiate.")
 	}
 
-	static Repository createRepository(File rootDir) {
-		return new Repository(Git.open(rootDir))
+	static Repository createRepository(Path rootDir) {
+		return new Repository(Git.open(rootDir.toFile()))
 	}
 
 	static RepositoryService createService(Repository repo) {

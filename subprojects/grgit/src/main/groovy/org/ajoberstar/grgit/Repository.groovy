@@ -34,12 +34,12 @@ class Repository {
 	 * Gets the directory the repository is contained in.
 	 * @return the root directory
 	 */
-	File getRootDir() {
-		return git.repository.directory
+	Path getRootDir() {
+		return git.repository.directory.toPath()
 	}
 
 	@Override
 	String toString() {
-		return "Repository(${getRootDir().canonicalPath})"
+		return "Repository(${getRootDir().toRealPath()})"
 	}
 }

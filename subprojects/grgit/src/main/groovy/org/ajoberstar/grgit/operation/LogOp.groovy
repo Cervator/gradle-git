@@ -28,7 +28,7 @@ import org.eclipse.jgit.lib.ObjectId
  * @since 0.7.0
  * @author Andrew Oberstar
  */
-class Log {
+class LogOp {
 	private Repository repo
 
 	List includes = []
@@ -37,7 +37,7 @@ class Log {
 	int skipCommits = 0
 	int maxCommits = -1
 
-	Log(Repository repo) {
+	LogOp(Repository repo) {
 		this.repo = repo	
 	}
 
